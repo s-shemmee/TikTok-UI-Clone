@@ -1,0 +1,57 @@
+/* BottomNavbar.css */
+
+.bottom-navbar {
+  position: fixed;
+  bottom: 47px;
+  height: 60px;
+  width: 427px;
+  background-color: #161616;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+  color: #d4d3d3;
+}
+
+.plus{
+  background-color: #fff;
+  color: #161616;
+  padding: 5px 10px;
+  border-radius: 25%;
+  border-right: 5px solid red;
+  border-left: 5px solid turquoise;
+  font-size: 18px;
+}
+
+.item-name {
+  color: #d4d3d3;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.bottom-navbar .active {
+  color: #fff;
+}
+
+.notification {
+  position: absolute;
+  top: -3px;
+  left: 300px;
+  background-color: red;
+  color: #fff;
+  font-size: 10px;
+  padding: 5px 5px;
+  border-radius: 50%;
+}

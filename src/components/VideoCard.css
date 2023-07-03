@@ -1,0 +1,36 @@
+.video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  scroll-snap-align: start;
+}
+
+.video::before {
+  content: '';
+  display: block;
+  box-shadow: 0 -30px 70px rgba(0, 0, 0, 0.5) inset;
+  width: 100%;
+  pointer-events: none;
+  z-index: 99;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: transparent;
+}
+
+.player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: fill ;
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-controls {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}

@@ -1,0 +1,49 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left {
+  position: relative;
+  color: white;
+  flex-grow: 1;
+  pointer-events: none;
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 40px;
+}
+
+.ticker {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ticker marquee {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.text {
+  width: 100%;
+}
+
+.text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.text span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #dadada;
+}

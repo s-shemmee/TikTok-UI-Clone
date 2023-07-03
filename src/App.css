@@ -1,0 +1,30 @@
+html {
+  scroll-snap-type: y mandatory;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.app {
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  position: relative;
+  height: 90vh;
+  width: calc(80vh * 9 / 16);
+  border-radius: 20px;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

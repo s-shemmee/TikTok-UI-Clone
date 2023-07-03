@@ -1,0 +1,31 @@
+.top-navbar {
+  position: fixed;
+  top: 47px;
+  height: 60px;
+  width: 427px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  z-index: 100;
+  margin-top: 10px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.top-navbar h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.top-navbar span {
+  font-weight: 600;
+}
+.top-navbar .icon {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
