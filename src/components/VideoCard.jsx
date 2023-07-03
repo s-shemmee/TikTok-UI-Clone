@@ -23,6 +23,7 @@ const VideoCard = (props) => {
 
   return (
     <div className="video">
+      {/* The video element */}
       <video
         className="player"
         onClick={onVideoPress}
@@ -35,9 +36,11 @@ const VideoCard = (props) => {
       ></video>
       <div className="bottom-controls">
         <div className="footer-left">
+          {/* The left part of the container */}
           <FooterLeft username={username} description={description} song={song} />
         </div>
         <div className="footer-right">
+          {/* The right part of the container */}
           <FooterRight likes={likes} shares={shares} comments={comments} saves={saves} profilePic={profilePic} />
         </div>
       </div>
