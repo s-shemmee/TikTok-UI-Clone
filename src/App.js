@@ -21,7 +21,7 @@ const videoUrls = [
     url: require('./videos/video2.mp4'),
     profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/eace3ee69abac57c39178451800db9d5~c5_100x100.jpeg?x-expires=1688479200&x-signature=wAkVmwL7lej15%2B16ypSWQOqTP8s%3D',
     username: 'dailydotdev',
-    description: 'Every developer brain @francesco.ciulla #developerjokes #programming #programminghumor #programmingmemes #codingtiktok #programmerhumor #programmingjokes',
+    description: 'Every developer brain @francesco.ciulla #developerjokes #programming #programminghumor #programmingmemes',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
     likes: '13.4K',
     comments: 3121,
@@ -43,7 +43,7 @@ const videoUrls = [
     url: require('./videos/video4.mp4'),
     profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg?x-expires=1688486400&x-signature=ssUbbCpZFJj6uj33D%2BgtcqxMvgQ%3D',
     username: 'faruktutkus',
-    description: 'Wait for the end | Im RTX 4090 TI | #softwareengineer #softwareengineer #coding #codinglife #codingmemes #coder #programminghumor #programmingmemes #memes #meme #not #python #java #csharp #cpp #javascript #kotlin #html #htmlcss #programming #gender #int #float',
+    description: 'Wait for the end | Im RTX 4090 TI | #softwareengineer #softwareengineer #coding #codinglife #codingmemes ',
     song: 'orijinal ses - Computer Science',
     likes: 9689,
     comments: 230,
@@ -101,8 +101,7 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <TopNavbar />
-
+        <TopNavbar className="top-navbar" />
         {/* Here we map over the videos array and create VideoCard components */}
         {videos.map((video, index) => (
           <VideoCard
@@ -120,11 +119,11 @@ function App() {
             autoplay={index === 0}
           />
         ))}
-
-        <BottomNavbar />
+        <BottomNavbar className="bottom-navbar" />
       </div>
     </div>
   );
+  
 }
 
 export default App;

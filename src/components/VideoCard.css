@@ -9,7 +9,7 @@
 .video::before {
   content: '';
   display: block;
-  box-shadow: 0 -30px 70px rgba(0, 0, 0, 0.5) inset;
+	box-shadow: 0 -33px 48px rgba(0, 0, 0, 0.5) inset;
   width: 100%;
   pointer-events: none;
   z-index: 99;

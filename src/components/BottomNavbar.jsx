@@ -1,11 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faUserFriends, faPlus, faInbox, fa7,faUser } from '@fortawesome/free-solid-svg-icons';
-import './BottomNavbar.css';
 
 function BottomNavbar() {
   return (
-    <div className="bottom-navbar-container">
       <div className="bottom-navbar">
         <div className="nav-item">
           <FontAwesomeIcon icon={faHouse} className="icon active" />
@@ -29,7 +27,6 @@ function BottomNavbar() {
           <span className="item-name">Profile</span>
         </div>
       </div>
-    </div>
   );
 }
 

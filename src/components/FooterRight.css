@@ -2,7 +2,8 @@
   z-index: 100;
   color: #fff;
   margin-right: 5px;
-  }
+  margin-bottom: 25px;
+}
 
 .sidebar-icon {
   display: flex;
@@ -43,7 +44,6 @@
 .record {
   animation: spinTheRecord infinite 5s linear;
   filter: invert(1);
-  margin-bottom: 30px;
 }
 
 .record img {
