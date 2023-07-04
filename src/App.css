@@ -1,21 +1,20 @@
 html {
   scroll-snap-type: y mandatory;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 .app {
   height: 100vh;
-  background-color: black;
+  background-color: #000;
   display: grid;
   place-items: center;
 }
 
 .container {
   position: relative;
-  height: 90vh;
-  width: calc(80vh * 9 / 16);
-  border-radius: 20px;
+  height: 667px;
+  width: 375px;
+  border-radius: 25px;
   overflow: scroll;
   scroll-snap-type: y mandatory;
 }

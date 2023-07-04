@@ -43,7 +43,7 @@ function FooterRight({ likes, comments, saves, shares, profilePic }) {
       <div className="sidebar-icon">
         {profilePic ? (
           // Displaying the user profile picture
-          <img src={profilePic} className='userprofile' alt='Profile' style={{ width: '50px', height: '50px', color: '#616161' }} />
+          <img src={profilePic} className='userprofile' alt='Profile' style={{ width: '45px', height: '45px', color: '#616161' }} />
         ) : null}
         {/* The user add icon */}
         <FontAwesomeIcon icon={userAddIcon} className='useradd' style={{ width: '15px', height: '15px', color: '#FF0000' }} onClick={handleUserAddClick}/>
@@ -52,7 +52,7 @@ function FooterRight({ likes, comments, saves, shares, profilePic }) {
         {/* The heart icon for liking */}
         <FontAwesomeIcon
           icon={faHeart}
-          style={{ width: '40px', height: '40px', color: liked ? '#FF0000' : 'white' }}
+          style={{ width: '35px', height: '35px', color: liked ? '#FF0000' : 'white' }}
           onClick={handleLikeClick}
         />
         {/* Displaying the formatted likes count */}
@@ -60,7 +60,7 @@ function FooterRight({ likes, comments, saves, shares, profilePic }) {
       </div>
       <div className="sidebar-icon">
         {/* The comment icon */}
-        <FontAwesomeIcon icon={faCommentDots} style={{ width: '40px', height: '40px', color: 'white' }} />
+        <FontAwesomeIcon icon={faCommentDots} style={{ width: '35px', height: '35px', color: 'white' }} />
         {/* Displaying the number of comments */}
         <p>{comments}</p>
       </div>
@@ -69,14 +69,14 @@ function FooterRight({ likes, comments, saves, shares, profilePic }) {
           // Displaying the bookmark icon when saved
           <FontAwesomeIcon
             icon={faBookmark}
-            style={{ width: '40px', height: '40px', color: '#ffc107' }}
+            style={{ width: '35px', height: '35px', color: '#ffc107' }}
             onClick={() => setSaved(false)}
           />
         ) : (
           // Displaying the bookmark icon when not saved
           <FontAwesomeIcon
             icon={faBookmark}
-            style={{ width: '40px', height: '40px', color: 'white' }}
+            style={{ width: '35px', height: '35px', color: 'white' }}
             onClick={() => setSaved(true)}
           />
         )}
@@ -85,7 +85,7 @@ function FooterRight({ likes, comments, saves, shares, profilePic }) {
       </div>
       <div className="sidebar-icon">
         {/* The share icon */}
-        <FontAwesomeIcon icon={faShare} style={{ width: '40px', height: '40px', color: 'white' }} />
+        <FontAwesomeIcon icon={faShare} style={{ width: '35px', height: '35px', color: 'white' }} />
         {/* Displaying the number of shares */}
         <p>{shares}</p>
       </div>

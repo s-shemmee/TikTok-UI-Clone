@@ -1,8 +1,8 @@
 .top-navbar {
   position: fixed;
-  top: 47px;
+  top: 120px;
   height: 60px;
-  width: 427px;
+  width: 375px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,18 +14,25 @@
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-.top-navbar h2 {
-  margin: 0;
-  font-size: 18px;
+.top-navbar h2{
+  font-size: 14px;
   font-weight: 500;
   color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  padding: 0 40px;
 }
 
-.top-navbar span {
-  font-weight: 600;
+.top-navbar h2 span{
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px; 
 }
+
 .top-navbar .icon {
-  font-size: 24px;
+  font-size: 16px;
   color: #fff;
   cursor: pointer;
 }

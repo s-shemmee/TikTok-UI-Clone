@@ -9,8 +9,8 @@
   flex-grow: 1;
   pointer-events: none;
   display: flex;
-  margin-left: 15px;
-  margin-bottom: 40px;
+  margin-left: 5px;
+  margin-bottom: 20px;
 }
 
 .ticker {
@@ -32,18 +32,17 @@
 
 .text h3 {
   font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .text p {
   font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 30px;
+  font-weight: 500;
 }
 
 .text span {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  color: #dadada;
+  color: #fff;
 }
