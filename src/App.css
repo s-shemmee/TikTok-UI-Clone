@@ -41,22 +41,30 @@ html {
   z-index: 1;
 }
 
-.top-navbar h2{
+.top-navbar h2 {
   font-size: 14px;
   font-weight: 500;
   color: #fff;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   padding: 0 40px;
 }
 
-.top-navbar h2 span{
-  font-size: 14px;
+.top-navbar h2 span {
   font-weight: 700;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px; 
+  position: relative;
 }
+
+.top-navbar h2 span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 50%;
+  height: 1px;
+  background-color: #fff;
+  transform: translateX(50%);
+}
+
 
 .top-navbar .icon {
   font-size: 16px;
@@ -109,11 +117,11 @@ html {
 
 .bottom-navbar .notification {
   position: absolute;
-  top: 5px;
-  left: 270px;
+  top: 0;
+  left: 260px;
   background-color: red;
   color: #fff;
-  font-size: 8px;
+  font-size: 7px;
   padding: 5px;
   border-radius: 50%;
 }
