@@ -1,0 +1,29 @@
+.tag-container {
+    position: absolute;
+    z-index: 1;
+}
+
+.tag-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    position: relative; /* Add this to ensure the popup is positioned relative to this button */
+}
+
+.tag-popup {
+    position: absolute; /* Change from relative to absolute */
+    top: -50px; /* Adjust this value as needed to position the popup above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px; /* Reduce padding to make the popup smaller */
+    font-size: 12px; /* Reduce font size if needed */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    pointer-events: none;
+    display: block; /* Set default display to none */
+}

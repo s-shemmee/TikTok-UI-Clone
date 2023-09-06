@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import FooterLeft from './FooterLeft';
 import FooterRight from './FooterRight';
 import './VideoCard.css';
+import ShoppingTag from './ShoppingTag';
 
 const VideoCard = (props) => {
   const { url, username, description, song, likes, shares, comments, saves, profilePic, setVideoRef, autoplay } = props;
@@ -20,6 +21,11 @@ const VideoCard = (props) => {
       videoRef.current.pause();
     }
   };
+  const [activeTag, setActiveTag] = useState(null);
+
+  const handleTagClick = (tagId) => {
+    setActiveTag((prevTag) => (prevTag === tagId ? null : tagId));
+  };
 
   return (
     <div className="video">
@@ -35,7 +41,8 @@ const VideoCard = (props) => {
         muted  // Add this line
         src={url}
       ></video>
-
+      <ShoppingTag id="product1" text="Product 1" x={50} y={100} onTagClick={handleTagClick} isActive={activeTag === "product1"} />
+      <ShoppingTag id="product2" text="Product 2" x={150} y={200} onTagClick={handleTagClick} isActive={activeTag === "product2"} />
       <div className="bottom-controls">
         <div className="footer-left">
           {/* The left part of the container */}
