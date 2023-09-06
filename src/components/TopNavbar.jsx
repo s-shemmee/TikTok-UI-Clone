@@ -6,7 +6,7 @@ const TopNavbar = () => {
   return (
     <div className="top-navbar">
       <FontAwesomeIcon icon={faTv} className='icon'/>
-      <h2>Following  |   <span>For You</span></h2>
+      <h2><span>Storefront For You</span></h2>
       <FontAwesomeIcon icon={faSearch} className='icon'/>
     </div>
   );

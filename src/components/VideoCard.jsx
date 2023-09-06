@@ -32,8 +32,10 @@ const VideoCard = (props) => {
           setVideoRef(ref);
         }}
         loop
+        muted  // Add this line
         src={url}
       ></video>
+
       <div className="bottom-controls">
         <div className="footer-left">
           {/* The left part of the container */}
