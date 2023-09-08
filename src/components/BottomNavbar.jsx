@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 function BottomNavbar() {
   return (
     <div className="bottom-navbar">
-      <div className="nav-item">
+      <a href="https://tik-tok-ui-clone-git-for-you-jordanleewei.vercel.app" className="nav-item">
         <FontAwesomeIcon icon={faHouse} className="icon active" />
         <span className="item-name active">Home</span>
-      </div>
+      </a>
       <div className="nav-item">
         <FontAwesomeIcon icon={faUserFriends} className="icon" />
         <span className="item-name">Friends</span>
