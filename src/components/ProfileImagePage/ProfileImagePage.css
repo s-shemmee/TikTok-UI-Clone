@@ -1,0 +1,14 @@
+.profile-image-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 375px;
+    overflow: hidden; /* This will ensure the bottom part of the image gets cropped */
+}
+
+.full-profile-image {
+    width: 100%; 
+    display: block;
+    object-fit: cover;
+    margin-bottom: -77px; /* This will "push" the image upwards, effectively cropping the bottom 77px */
+}

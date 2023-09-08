@@ -3,6 +3,9 @@ import './App.css';
 import VideoCard from './components/VideoCard';
 import BottomNavbar from './components/BottomNavbar';
 import TopNavbar from './components/TopNavbar';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import ProfileImagePage from './components/ProfileImagePage/ProfileImagePage';
+
 
 // This array holds information about different videos
 const videoUrls = [
@@ -76,32 +79,32 @@ function App() {
     videoRefs.current[index] = ref;
   };
 
+  const location = useLocation();
+
   return (
     <div className="app">
       <div className="container">
-        <TopNavbar className="top-navbar" />
-        {/* Here we map over the videos array and create VideoCard components */}
-        {videos.map((video, index) => (
-          <VideoCard
-            key={index}
-            username={video.username}
-            description={video.description}
-            song={video.song}
-            likes={video.likes}
-            saves={video.saves}
-            comments={video.comments}
-            shares={video.shares}
-            url={video.url}
-            profilePic={video.profilePic}
-            setVideoRef={handleVideoRef(index)}
-            autoplay={index === 0}
-          />
-        ))}
+        {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
+        {/* Removed the second unconditional TopNavbar */}
+        <Routes>
+          <Route path="/" element={
+            <>
+              {videos.map((video, index) => (
+                <VideoCard
+                  key={index}
+                  {...video}
+                  setVideoRef={handleVideoRef(index)}
+                  autoplay={index === 0}
+                />
+              ))}
+            </>
+          } />
+          <Route path="/profile-image" element={<ProfileImagePage />} />
+        </Routes>
         <BottomNavbar className="bottom-navbar" />
       </div>
     </div>
   );
-  
 }
 
 export default App;
