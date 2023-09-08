@@ -24,12 +24,13 @@ function BottomNavbar() {
         <FontAwesomeIcon icon={faInbox} className="icon" />
         <span className="item-name">Inbox</span>
       </div>
-      <div className="nav-item">
-        <Link to="/profile-image">
+      <Link to="/profile-image">
+        <div className="nav-item">
           <FontAwesomeIcon icon={faUser} className="icon" />
           <span className="item-name">Profile</span>
-        </Link>
-      </div>
+        </div>
+      </Link>
+
     </div>
   );
 }
