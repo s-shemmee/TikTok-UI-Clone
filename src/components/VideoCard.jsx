@@ -41,8 +41,17 @@ const VideoCard = (props) => {
         muted  // Add this line
         src={url}
       ></video>
-      <ShoppingTag id="product1" text="Product 1" x={50} y={100} onTagClick={handleTagClick} isActive={activeTag === "product1"} />
-      <ShoppingTag id="product2" text="Product 2" x={150} y={200} onTagClick={handleTagClick} isActive={activeTag === "product2"} />
+      {props.tags && props.tags.map(tag => (
+        <ShoppingTag
+          key={tag.id}
+          id={tag.id}
+          text={tag.text}
+          x={tag.x}
+          y={tag.y}
+          onTagClick={handleTagClick}
+          isActive={activeTag === tag.id}
+        />
+      ))}
       <div className="bottom-controls">
         <div className="footer-left">
           {/* The left part of the container */}

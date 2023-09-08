@@ -19,6 +19,11 @@ const videoUrls = [
     comments: 13,
     saves: 23,
     shares: 1,
+    tags: [
+      { id: 'product1', text: 'Product 1', x: 50, y: 100 },
+      { id: 'product2', text: 'Product 2', x: 150, y: 200 },
+      // ... more tags
+    ]
   },
   {
     url: require('./videos/video2.mp4'),
@@ -30,6 +35,11 @@ const videoUrls = [
     comments: 3121,
     saves: 254,
     shares: 420,
+    tags: [
+      { id: 'product1', text: 'Product 1', x: 300, y: 100 },
+      { id: 'product2', text: 'Product 2', x: 150, y: 200 },
+      // ... more tags
+    ]
   },
 ];
 
