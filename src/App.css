@@ -1,3 +1,6 @@
+* {
+  text-shadow: none !important;
+}
 html {
   scroll-snap-type: y mandatory;
   font-family: 'Montserrat', sans-serif;

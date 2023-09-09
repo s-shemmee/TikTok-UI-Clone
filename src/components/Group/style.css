@@ -1,0 +1,43 @@
+.group {
+  position: relative;
+  top: -118px;
+  left: -59px;
+}
+
+.group .overlap {
+  height: 93px;
+  position: relative;
+}
+
+.group .bubble-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.group .design-component-instance-node {
+  background-image: url(./shape.svg) !important;
+}
+
+.group .show-more-icon {
+  height: 20px !important;
+  left: 114px !important;
+  position: absolute !important;
+  top: 33px !important;
+  width: 20px !important;
+}
+
+.group .vector {
+  height: 83px;
+  left: 110px;
+  position: absolute;
+  top: 0;
+  width: 2px;
+}
+
+.commentsWrapper {
+  position: fixed;
+  bottom: 30%;
+  left: 50%;
+  z-index: 1000000000;
+}
