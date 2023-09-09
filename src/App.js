@@ -22,8 +22,8 @@ const videoUrls = [
     saves: 23,
     shares: 1,
     tags: [
-      { id: 'product1', text: 'Product 1', x: 50, y: 100 },
-      { id: 'product2', text: 'Product 2', x: 150, y: 200 },
+      { id: 'product1', text: 'Product 1', x: 110, y: 340 },
+      { id: 'product2', text: 'Product 2', x: 220, y: 330 },
       // ... more tags
     ]
   },
@@ -39,7 +39,7 @@ const videoUrls = [
     shares: 420,
     tags: [
       { id: 'product1', text: 'Product 1', x: 300, y: 100 },
-      { id: 'product2', text: 'Product 2', x: 150, y: 200 },
+      { id: 'product2', text: 'Product 2', x: 100, y: 200 },
       // ... more tags
     ]
   },
