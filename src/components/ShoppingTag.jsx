@@ -3,7 +3,7 @@ import './ShoppingTag.css';
 import { Group } from './Group';
 
 
-const ShoppingTag = ({ id, text, x = 0, y = 0, onTagClick, isActive }) => {
+const ShoppingTag = ({ id, text, x = 0, y = 0, onTagClick, isActive, setShowItemDetails }) => {
 
   const tagStyle = {
     left: `${x}px`,
@@ -12,8 +12,8 @@ const ShoppingTag = ({ id, text, x = 0, y = 0, onTagClick, isActive }) => {
 
   return (
     <div className="tag-container" style={tagStyle}>
-      <button className="tag-button" onClick={() => onTagClick(id)}></button>
-      {isActive && <Group />}
+      <button className="tag-button" aria-label="Toggle Tag" onClick={() => onTagClick(id)}></button>
+      {isActive && <Group setShowItemDetails={setShowItemDetails} />}
     </div>
   );
 }

@@ -5,8 +5,9 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 
 import React from "react";
 
-export const ShowMoreIcon = ({ className }) => {
+export const ShowMoreIcon = ({ className, onClick }) => {
   return (
+    <div onClick={onClick}>
     <svg
       className={`show-more-icon ${className}`}
       fill="none"
@@ -23,5 +24,6 @@ export const ShowMoreIcon = ({ className }) => {
         fillRule="evenodd"
       />
     </svg>
+    </div>
   );
 };

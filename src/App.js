@@ -5,6 +5,8 @@ import BottomNavbar from './components/BottomNavbar';
 import TopNavbar from './components/TopNavbar';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import ProfileImagePage from './components/ProfileImagePage/ProfileImagePage';
+import ItemDetails from './components/ItemDetails/src/components/ItemDetails/ItemDetails.jsx';
+
 
 
 // This array holds information about different videos
@@ -46,6 +48,8 @@ const videoUrls = [
 function App() {
   const [videos, setVideos] = useState([]);
   const videoRefs = useRef([]);
+  const [showItemDetails, setShowItemDetails] = useState(false);
+  const itemDetailsRef = useRef(null);
 
   useEffect(() => {
     setVideos(videoUrls);
@@ -90,12 +94,23 @@ function App() {
   };
 
   const location = useLocation();
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+        if (showItemDetails && itemDetailsRef.current && !itemDetailsRef.current.contains(event.target)) {
+            setShowItemDetails(false);
+        }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+        document.removeEventListener('click', handleClickOutside);
+    };
+}, [showItemDetails]);
 
   return (
     <div className="app">
       <div className="container">
+      {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
         {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
-        {/* Removed the second unconditional TopNavbar */}
         <Routes>
           <Route path="/" element={
             <>
@@ -105,6 +120,7 @@ function App() {
                   {...video}
                   setVideoRef={handleVideoRef(index)}
                   autoplay={index === 0}
+                  setShowItemDetails={setShowItemDetails}  // Add this line
                 />
               ))}
             </>

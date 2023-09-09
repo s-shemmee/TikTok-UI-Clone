@@ -1,0 +1,92 @@
+.item-details {
+  height: 542px;
+  overflow: hidden;
+  width: 414px;  
+  position: absolute; /* Change from fixed to absolute */
+  bottom: -70px; /* Adjust this to be 0 so it's aligned to the bottom of its container */
+  left: 50%;
+  transform: translateX(-50%) scale(0.9058);
+  z-index: 1000000000;  
+}
+
+
+
+.item-details .overlap-group {
+  background-color: #ffffff;
+  border-radius: 8px 8px 0px 0px;
+  height: 653px;
+  position: relative;
+  
+}
+
+.item-details .overlap {
+  background-image: url(../../../static/img/image-15.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 212px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 414px;
+}
+
+.item-details .close-icon {
+  height: 10px;
+  left: 386px;
+  position: absolute;
+  top: 18px;
+  width: 10px;
+}
+
+.item-details .element-wrapper {
+  background: linear-gradient(180deg, rgb(255, 104.76, 40.37) 65.1%, rgb(250, 45, 108) 89.27%);
+  height: 49px;
+  left: 0;
+  position: absolute;
+  top: 212px;
+  width: 414px;
+}
+
+.item-details .element {
+  color: #ffffff;
+  font-family: "Roboto", Helvetica;
+  font-size: 23px;
+  font-weight: 600;
+  left: 24px;
+  letter-spacing: 0.1px;
+  line-height: normal;
+  position: absolute;
+  top: 11px;
+  white-space: nowrap;
+}
+
+.item-details .div {
+  height: 267px;
+  left: 0;
+  position: absolute;
+  top: 272px;
+  width: 414px;
+}
+
+.item-details .jacket-with-button {
+  color: #445154;
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
+  height: 29px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 15px;
+  position: absolute;
+  top: 0;
+  width: 304px;
+}
+
+.item-details .IMG {
+  height: 241px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 26px;
+  width: 414px;
+}

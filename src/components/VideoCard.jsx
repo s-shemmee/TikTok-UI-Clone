@@ -5,7 +5,7 @@ import './VideoCard.css';
 import ShoppingTag from './ShoppingTag';
 
 const VideoCard = (props) => {
-  const { url, username, description, song, likes, shares, comments, saves, profilePic, setVideoRef, autoplay } = props;
+  const { setShowItemDetails, url, username, description, song, likes, shares, comments, saves, profilePic, setVideoRef, autoplay } = props;
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -22,10 +22,10 @@ const VideoCard = (props) => {
     }
   };
   const [activeTag, setActiveTag] = useState(null);
-
   const handleTagClick = (tagId) => {
     setActiveTag((prevTag) => (prevTag === tagId ? null : tagId));
-  };
+};
+
 
   return (
     <div className="video">
@@ -50,6 +50,7 @@ const VideoCard = (props) => {
           y={tag.y}
           onTagClick={handleTagClick}
           isActive={activeTag === tag.id}
+          setShowItemDetails={setShowItemDetails}
         />
       ))}
       <div className="bottom-controls">
