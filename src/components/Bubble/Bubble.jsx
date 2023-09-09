@@ -10,9 +10,9 @@ export const Bubble = ({ className, overlapGroupClassName }) => {
   return (
     <div className={`bubble ${className}`}>
       <div className={`overlap-group ${overlapGroupClassName}`}>
-        <div className="text-wrapper">Jacket with Button Placket</div>
-        <div className="div">$3,700</div>
-        <div className="text-wrapper-2">Dior</div>
+        <div className="text-wrapper">Item XYZ</div>
+        <div className="div">$9,876</div>
+        <div className="text-wrapper-2">Future</div>
       </div>
     </div>
   );
