@@ -3,14 +3,40 @@
     z-index: 1;
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes colorPulse {
+    0%, 100% {
+        background-color: white;
+    }
+    50% {
+        background-color: gray;
+    }
+}
+
 .tag-button {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     background-color: white;
     border: none;
     cursor: pointer;
     position: relative; /* Add this to ensure the popup is positioned relative to this button */
+    animation: pulse 1.5s infinite; /* This will apply the pulse animation */
+}
+
+.tag-button:hover {
+    animation: pulse 1.5s infinite, colorPulse 1.5s infinite;
 }
 
 .tag-popup {
