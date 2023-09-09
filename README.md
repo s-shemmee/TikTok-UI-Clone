@@ -1,21 +1,25 @@
+
 # TikTok: Future X Past 
 
-This document provides details about the frontend and backend implementation for the TikTok: Future X Pastproject.
+This document provides details about the frontend and backend implementation for the TikTok: Future X Past project.
 - [Frontend Section](#tiktok-future-x-past-frontend)
 - [Backend Section](#tiktok-future-x-past-backend)
-
 
 # TikTok: Future X Past Frontend
 
 The TikTok: Future X Past is a web application developed to replicate the user interface of the TikTok app. It is built using React.js, CSS, and JSX, and allows users to browse and view TikTok-style videos in a familiar and interactive interface.
 
 ## Features
-- Browse and view TikTok-style videos.
-- Smooth and responsive video playback.
-- User-friendly interface with intuitive navigation.
-- Infinite scrolling for seamless video discovery.
-- Like, comment, and share videos.
-- Follow users and explore personalized content.
+- Browse TikTok-style videos with ease.
+- Experience smooth, responsive video playback.
+- Navigate a user-centric interface intuitively.
+- Seamlessly discover new content with infinite scrolling.
+- Engage with content: like, comment, and share.
+- Connect with creators and enjoy a tailored content experience.
+- Explore a themed Digital Storefront powered by TikTok's recommendation algorithm and Generative AI.
+- Unlock achievements and showcase them on TikTok profiles, enhancing social engagement.
+- Tailored product recommendations based on user behavior and previous purchase habits.
+- Gamified shopping experience with achievement-driven incentives.
 
 ## Technologies & Tools Used
 - React.js
@@ -52,6 +56,8 @@ Our frontend is developed using React.js, while the backend is built with Flask 
 
 ## Credits
 The TikTok UI Clone was created by [s-shemmee](https://github.com/s-shemmee), which much of the code for the frontend is based off on
+
+---
 
 # TikTok: Future X Past Backend
 
