@@ -6,7 +6,8 @@ import TopNavbar from './components/TopNavbar';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import ProfileImagePage from './components/ProfileImagePage/ProfileImagePage';
 import ItemDetails from './components/ItemDetails/src/components/ItemDetails/ItemDetails.jsx';
-
+import axios from 'axios';
+import ImageWithPopup from './components/achievementicon';
 
 
 // This array holds information about different videos
@@ -50,16 +51,26 @@ function App() {
   const videoRefs = useRef([]);
   const [showItemDetails, setShowItemDetails] = useState(false);
   const itemDetailsRef = useRef(null);
+  const [storefrontImages, setStorefrontImages] = useState([]);
+  function get_storefront_images () {
+    axios.get('http://localhost:5000/get-user-storefront-images?user_id=1')
+      .then(function (response) {
+        // Access the storefront images from the response
+        const images = response.data.storefront_images;
+        setStorefrontImages(images);
+      })
+      .catch(function (error) {
+        console.error('Error:', error);
+      });
+  }
 
   useEffect(() => {
-    setVideos(videoUrls);
-  }, []);
-
-  useEffect(() => {
+    get_storefront_images()
     const observerOptions = {
       root: null,
       rootMargin: '0px',
       threshold: 0.8, // Adjust this value to change the scroll trigger point
+      
     };
 
     // This function handles the intersection of videos
@@ -111,23 +122,24 @@ function App() {
       <div className="container">
       {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
         {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
-        <Routes>
-          <Route path="/" element={
-            <>
-              {videos.map((video, index) => (
-                <VideoCard
-                  key={index}
-                  {...video}
-                  setVideoRef={handleVideoRef(index)}
-                  autoplay={index === 0}
-                  setShowItemDetails={setShowItemDetails}  // Add this line
-                />
-              ))}
-            </>
-          } />
-          <Route path="/profile-image" element={<ProfileImagePage />} />
-        </Routes>
+        <div style={{ overflowX: 'scroll', whiteSpace: 'nowrap' }}>
+            {storefrontImages.length > 0 ? (
+              <div>
+                {storefrontImages.map((image, index) => (
+                  <div key={index} style={{ display: 'inline-block'}}>
+                    <h2>{image.name}</h2>
+                    <p>{image.description}</p>
+                    <p>{image.style}</p>
+                    <img src={`data:image/png;base64,${image.storefront_image_binary}`} alt={image.name} />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>No storefront images found.</p>
+            )}
+          </div>
         <BottomNavbar className="bottom-navbar" />
+        {/* <ImageWithPopup imagePath={"public\TikTok User 2.png"} achievement_id={14}></ImageWithPopup> */}
       </div>
     </div>
   );
