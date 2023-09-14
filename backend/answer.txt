@@ -1,0 +1,6 @@
+{
+  "Name of the Achievement": "Rocktober Fest",
+  "Description of the achievement": "Congratulations! You have unlocked the Rocktober Fest achievement by purchasing a guitar in the month of October. Rock on with your new instrument and share this achievement with your friends to let them know you're ready to rock!",
+  "Occasion": "Oktoberfest",
+  "Product Type": "Guitar"
+}

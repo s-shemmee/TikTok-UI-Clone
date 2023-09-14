@@ -1,0 +1,9 @@
+Faker==19.6.0
+Flask==2.3.3
+flask_cors==4.0.0
+flask_sqlalchemy==3.0.5
+openai==0.28.0
+Pillow==10.0.0
+Pillow==10.0.0
+Requests==2.31.0
+stability_sdk==0.8.4
