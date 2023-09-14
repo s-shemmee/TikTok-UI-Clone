@@ -20,45 +20,33 @@ const ImageCard = (props) => {
 
 
   return (
-    <div className="image" style={{ maxHeight: '100%', overflow: 'scroll' }}>
-      {displaystorefront.length > 0 ? (
-        <div >
-          {displaystorefront.map((image, index) => (
-            <div key={index} style={{ display: 'inline-block' , maxHeight: '200%' }}>
-              {image.storefront_image_binary ? (
-                <>
-                  <img
-                    src={`data:image/png;base64,${image.storefront_image_binary}`}
-                    alt={image.name}
-                    style={{
-                      maxWidth: '100%',
-                      maxHeight: '200%',
-                      transform: 'scale(2)',
-                    }}
-                  />
-                  {console.log('image is ', image)} {/* Add this line to log the image */}
-                </>
-              ) : (
-                <p>No image available</p>
-              )}
-            </div>
-          ))}
-          {props.tags && props.tags.map((tag) => (
-            <ShoppingTag
-              key={tag.id}
-              id={tag.id}
-              text={tag.text}
-              x={tag.x}
-              y={tag.y}
-              onTagClick={handleTagClick}
-              isActive={activeTag === tag.id}
-              setShowItemDetails={setShowItemDetails}
-            />
-          ))}
-        </div>
+    <div className="image" style={{ maxHeight: '100%', height: '150%' }}>
+      {displaystorefront ? (
+        <img
+          src={`data:image/png;base64,${displaystorefront.storefront_image_binary}`}
+          alt={displaystorefront.name}
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%', // Adjust this to control the image height
+            transform: 'scale(1.5)',
+          }}
+        />
       ) : (
-        <p>No storefront images available</p>
+        <p>No image available</p>
       )}
+      
+      {props.tags && props.tags.map((tag) => (
+        <ShoppingTag
+          key={tag.id}
+          id={tag.id}
+          text={tag.text}
+          x={tag.x}
+          y={tag.y}
+          onTagClick={handleTagClick}
+          isActive={activeTag === tag.id}
+          setShowItemDetails={setShowItemDetails}
+        />
+      ))}
   
       <div className="bottom-controls" style={{ position: 'sticky', bottom: 0 }}>
         <div className="footer-left" style={{ marginRight: 'auto' }}>
@@ -70,6 +58,8 @@ const ImageCard = (props) => {
       </div>
     </div>
   );
+  
+  
   
 };
 
