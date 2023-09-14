@@ -22,7 +22,7 @@ const ImageCard = (props) => {
   return (
     <div className="image" style={{ maxHeight: '100%', overflow: 'auto' }}>
       {displaystorefront.length > 0 ? (
-        <div style={{ maxHeight: '150%', overflow: 'auto' }}>
+        <div >
           {displaystorefront.map((image, index) => (
             <div key={index} style={{ display: 'inline-block' }}>
               {image.storefront_image_binary ? (
