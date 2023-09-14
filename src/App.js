@@ -62,7 +62,7 @@ function App() {
     // const storefrontIds = [1, 2, 3];
     // Generate random indexes
     const storefrontIds = [];
-    while (storefrontIds.length < 3) {
+    while (storefrontIds.length < 5) {
       const randomIndex = getRandomIndex();
       if (!storefrontIds.includes(randomIndex)) {
         storefrontIds.push(randomIndex);
