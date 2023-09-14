@@ -19,55 +19,58 @@ const ImageCard = (props) => {
 
 
 
-return (
-    <div className="image" style={{maxHeight: '100%', overflow: 'auto' }}>
-      <div>
-      {props.tags && props.tags.map((tag) => (
-        <ShoppingTag
-          key={tag.id}
-          id={tag.id}
-          text={tag.text}
-          x={tag.x}
-          y={tag.y}
-          onTagClick={handleTagClick}
-          isActive={activeTag === tag.id}
-          setShowItemDetails={setShowItemDetails}
-        />
-      ))}
-      </div>
+  return (
+    <div className="image" style={{ maxHeight: '100%', overflow: 'scroll' }}>
       {displaystorefront.length > 0 ? (
-        <div style={{maxHeight: '100%', overflow: 'auto' }}> 
+        <div >
           {displaystorefront.map((image, index) => (
-            <div key={index} style={{ display: 'inline-block' }}>
-              <h2>{image.name}</h2>
-              <p>{image.description}</p>
-              <p>{image.style}</p>
+            <div key={index} style={{ display: 'inline-block' , maxHeight: '200%' }}>
               {image.storefront_image_binary ? (
-                <img src={`data:image/png;base64,${image.storefront_image_binary}`} alt={image.name}  style={{ maxWidth: '100%', maxHeight: '200%',
-                transform: 'scale(1.5)', }}/>
+                <>
+                  <img
+                    src={`data:image/png;base64,${image.storefront_image_binary}`}
+                    alt={image.name}
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '200%',
+                      transform: 'scale(2)',
+                    }}
+                  />
+                  {console.log('image is ', image)} {/* Add this line to log the image */}
+                </>
               ) : (
                 <p>No image available</p>
               )}
-              {console.log('image is ',image)} {/* Add this line to log the image */}
             </div>
+          ))}
+          {props.tags && props.tags.map((tag) => (
+            <ShoppingTag
+              key={tag.id}
+              id={tag.id}
+              text={tag.text}
+              x={tag.x}
+              y={tag.y}
+              onTagClick={handleTagClick}
+              isActive={activeTag === tag.id}
+              setShowItemDetails={setShowItemDetails}
+            />
           ))}
         </div>
       ) : (
         <p>No storefront images available</p>
       )}
-
-      <div className="bottom-controls">
-        <div className="footer-left">
-          {/* The left part of the container */}
+  
+      <div className="bottom-controls" style={{ position: 'sticky', bottom: 0 }}>
+        <div className="footer-left" style={{ marginRight: 'auto' }}>
           <FooterLeft username={username} description={description} song={song} />
         </div>
-        <div className="footer-right">
-          {/* The right part of the container */}
+        <div className="footer-right" style={{ marginRight: 'auto' }}>
           <FooterRight likes={likes} shares={shares} comments={comments} saves={saves} profilePic={profilePic} />
         </div>
       </div>
     </div>
   );
+  
 };
 
 export default ImageCard;

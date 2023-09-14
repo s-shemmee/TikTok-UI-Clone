@@ -52,9 +52,22 @@ function App() {
   const [showItemDetails, setShowItemDetails] = useState(false);
   const itemDetailsRef = useRef(null);
   const [storefrontImages, setStorefrontImages] = useState([]);
+  function getRandomIndex() {
+    return Math.floor(Math.random() * 9) + 1;
+  }
+  
+  
   function get_storefront_images() {
     // An array of storefront IDs you want to fetch
-    const storefrontIds = [1, 2, 3];
+    const storefrontIds = [1, 2, 3,4,5,6,7,8,9];
+    // Generate random indexes
+    // const storefrontIds = [];
+    // while (storefrontIds.length < 5) {
+    //   const randomIndex = getRandomIndex();
+    //   if (!storefrontIds.includes(randomIndex)) {
+    //     storefrontIds.push(randomIndex);
+    //   }
+    // }
     
     // An array to store the promises for each request
     const requests = storefrontIds.map(storefrontId => {
@@ -114,12 +127,6 @@ function App() {
       observer.disconnect();
     };
   }, [videos]);
-
-  // This function handles the reference of each video
-  const handleVideoRef = (index) => (ref) => {
-    videoRefs.current[index] = ref;
-  };
-
   const location = useLocation();
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -139,14 +146,15 @@ return (
         {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
         {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
 
-        {storefrontImages.length > 0 && ( 
+        {storefrontImages.length > 0 && storefrontImages.map((image, index) => (
           <ImageCard
+            key={index} // Make sure to add a unique key prop when mapping over elements
             setShowItemDetails={setShowItemDetails}
-            {...Image_details[0]}
-            storefront_images={storefrontImages}
-
+            {...Image_details[index]}
+            storefront_images={[image]} // Create an array with a single image
           />
-        )}
+        ))}
+
 
         <BottomNavbar className="bottom-navbar" />
         {/* <ImageWithPopup imagePath={"public\TikTok User 2.png"} achievement_id={14}></ImageWithPopup> */}
