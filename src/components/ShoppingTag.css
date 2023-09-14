@@ -30,7 +30,7 @@
     border-radius: 50%;
     opacity: 75%;
     background-color: rgb(170, 174, 175);
-    border: none;
+    border: 4px solid rgb(10, 10, 10); /* Add a light blue border when clicked */
     cursor: pointer;
     position: relative; /* Add this to ensure the popup is positioned relative to this button */
     animation: pulse 1.5s infinite; /* This will apply the pulse animation */
@@ -38,12 +38,12 @@
 
 .tag-button:hover {
     animation: pulse 1.5s infinite, colorPulse 1.5s infinite;
-    opacity: 1;
 }
 
 .tag-button.onClick {
     border: 4px solid rgb(132, 231, 244); /* Add a light blue border when clicked */
-  }
+    animation: none;
+}
 
 .tag-popup {
     position: absolute; /* Change from relative to absolute */
