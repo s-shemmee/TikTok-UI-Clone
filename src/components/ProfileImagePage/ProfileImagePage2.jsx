@@ -10,25 +10,24 @@ function ProfileImagePage() {
   const images = [
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=9",
-      captions: ["Oktoberfest", "Achieved!"]
+      captions: ["Holiday Spirit", "Achieved!"]
     },
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=10",
-      captions: ["Teachers’ Day Sale", "Achieved!"]
+      captions: ["Cosmic Lover", "Achieved!"]
     },
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=11",
-      captions: ["Teachers’ Day Sale", "Achieved!"]
+      captions: ["Candle Fanatic", "Achieved!"]
     },
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=12",
-      captions: ["Teachers’ Day Sale", "Achieved!"]
+      captions: ["Scents & Wines", "Achieved!"]
     },
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=13",
-      captions: ["Teachers’ Day Sale", "Achieved!"]
+      captions: ["Art Lover", "Achieved!"]
     },
-    // ... add more images with captions
   ];
 
 
