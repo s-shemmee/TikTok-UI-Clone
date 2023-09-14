@@ -127,12 +127,6 @@ function App() {
       observer.disconnect();
     };
   }, [videos]);
-
-  // This function handles the reference of each video
-  const handleVideoRef = (index) => (ref) => {
-    videoRefs.current[index] = ref;
-  };
-
   const location = useLocation();
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -152,14 +146,15 @@ return (
         {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
         {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
 
-        {storefrontImages.length > 0 && ( 
+        {storefrontImages.length > 0 && storefrontImages.map((image, index) => (
           <ImageCard
+            key={index} // Make sure to add a unique key prop when mapping over elements
             setShowItemDetails={setShowItemDetails}
-            {...Image_details[0]}
-            storefront_images={storefrontImages}
-
+            {...Image_details[index]}
+            storefront_images={[image]} // Create an array with a single image
           />
-        )}
+        ))}
+
 
         <BottomNavbar className="bottom-navbar" />
         {/* <ImageWithPopup imagePath={"public\TikTok User 2.png"} achievement_id={14}></ImageWithPopup> */}

@@ -20,7 +20,7 @@ const ImageCard = (props) => {
 
 
   return (
-    <div className="image" style={{ maxHeight: '100%', overflow: 'auto' }}>
+    <div className="image" style={{ maxHeight: '100%', overflow: 'scroll' }}>
       {displaystorefront.length > 0 ? (
         <div >
           {displaystorefront.map((image, index) => (
@@ -33,7 +33,7 @@ const ImageCard = (props) => {
                     style={{
                       maxWidth: '100%',
                       maxHeight: '200%',
-                      transform: 'scale(1)',
+                      transform: 'scale(2)',
                     }}
                   />
                   {console.log('image is ', image)} {/* Add this line to log the image */}

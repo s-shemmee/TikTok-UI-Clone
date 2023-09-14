@@ -1,8 +1,8 @@
 .Image {
-  position: relative;
+  position: sticky;
   width: 100%; /* Set a fixed width */
   height: 100%; /* Set a fixed height */
-  overflow: auto; /* Enable both vertical and horizontal scrolling */
+  overflow: hidden; /* Enable both vertical and horizontal scrolling */
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   scroll-snap-align: start;
 }
