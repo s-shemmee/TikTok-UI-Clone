@@ -39,14 +39,3 @@
   align-items: flex-end;
   height: 100%;
 }
-.Image * {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-.Image img {
-  border: none;
-  outline: none;
-}
