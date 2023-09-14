@@ -12,11 +12,11 @@ export const Group = ({ setShowItemDetails }) => {
       console.log("Hello World");
   };
 
-
+const itemDetails = ['Item XYZ', '$1234'];
   return (
     <div className="group">
       <div className="overlap">
-        <Bubble className="bubble-instance" overlapGroupClassName="design-component-instance-node" />
+        <Bubble className="bubble-instance" overlapGroupClassName="design-component-instance-node" itemDetails={itemDetails} />
         <ShowMoreIcon className="show-more-icon" onClick={handleShowMoreClick} />
         <img className="vector" alt="Vector" src={vectorImage} />
       </div>
