@@ -39,6 +39,11 @@
     animation: pulse 1.5s infinite, colorPulse 1.5s infinite;
 }
 
+.tag-button.click {
+    background-color: #656565; /* Change the background color when clicked */
+    transform: scale(1.1); /* Scale the button slightly when clicked */
+}
+
 .tag-popup {
     position: absolute; /* Change from relative to absolute */
     top: -50px; /* Adjust this value as needed to position the popup above the button */
