@@ -20,7 +20,7 @@ const ImageCard = (props) => {
 
 
   return (
-    <div className="image" style={{ maxHeight: '100%', height: '150%' }}>
+    <div className="image" style={{ position: 'relative', height: '100%' }}>
       {displaystorefront ? (
         <img
           src={`data:image/png;base64,${displaystorefront.storefront_image_binary}`}
@@ -28,13 +28,14 @@ const ImageCard = (props) => {
           style={{
             maxWidth: '100%',
             maxHeight: '100%', // Adjust this to control the image height
-            transform: 'scale(1.5)',
+            transform: 'scale(2)',
+            position: 'absolute', // Position the image within the parent div
+            top: 30,
+            left: 0,
           }}
         />
-      ) : (
-        <p>No image available</p>
-      )}
-      
+      ) : null}
+  
       {props.tags && props.tags.map((tag) => (
         <ShoppingTag
           key={tag.id}
@@ -45,10 +46,15 @@ const ImageCard = (props) => {
           onTagClick={handleTagClick}
           isActive={activeTag === tag.id}
           setShowItemDetails={setShowItemDetails}
+          style={{
+            position: 'absolute', // Position the shopping tag within the parent div
+            top: tag.y, // Adjust top and left to position the tag as needed
+            left: tag.x,
+          }}
         />
       ))}
   
-      <div className="bottom-controls" style={{ position: 'sticky', bottom: 0 }}>
+      <div className="bottom-controls" style={{ position: 'relative', bottom: 150 }}>
         <div className="footer-left" style={{ marginRight: 'auto' }}>
           <FooterLeft username={username} description={description} song={song} />
         </div>
@@ -58,8 +64,6 @@ const ImageCard = (props) => {
       </div>
     </div>
   );
-  
-  
   
 };
 
