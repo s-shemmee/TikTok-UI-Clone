@@ -12,7 +12,7 @@ export const Bubble = ({ className, overlapGroupClassName, itemDetails }) => {
       <div className={`overlap-group ${overlapGroupClassName}`}>
         <div className="text-wrapper">{itemDetails[0]}</div>
         <div className="div">{itemDetails[1]}</div>
-        <div className="text-wrapper-2">Future</div>
+        <div className="text-wrapper-2">Price</div>
       </div>
     </div>
   );

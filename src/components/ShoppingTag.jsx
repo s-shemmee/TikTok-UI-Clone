@@ -5,6 +5,7 @@ import { Group } from './Group';
 const ShoppingTag = ({ id, itemName, x = 0, y = 0, onTagClick, isActive, setShowItemDetails }) => {
   const [isClicked, setIsClicked] = useState(false); // Define isClicked state and its setter
   const buttonRef = useRef(null);
+  const groupRef = useRef(null);
 
   const tagStyle = {
     left: `${x}px`,
@@ -15,20 +16,25 @@ const ShoppingTag = ({ id, itemName, x = 0, y = 0, onTagClick, isActive, setShow
     setIsClicked(!isClicked);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-        // Clicked outside of the button, reset the state
-        setIsClicked(false);
-      }
-    };
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      (buttonRef.current &&
+      !buttonRef.current.contains(event.target)) &&
+      (groupRef.current &&
+      !groupRef.current.contains(event.target))
+    ) {
+      // Clicked outside of the button and Group, reset the state
+      setIsClicked(false);
+    }
+  };
 
-    document.addEventListener('mousedown', handleClickOutside);
+  document.addEventListener('mousedown', handleClickOutside);
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, []);
 
   const min = 100;
   const max = 1000;
@@ -51,8 +57,12 @@ const ShoppingTag = ({ id, itemName, x = 0, y = 0, onTagClick, isActive, setShow
           handleButtonClick(); // Additional onClick function
         }}
       ></button>
-      { isClicked && (
-        <Group setShowItemDetails={setShowItemDetails} itemName={itemName} itemPrice={price} />
+      { isClicked && isActive && (
+        <Group 
+        ref={groupRef}
+        setShowItemDetails={setShowItemDetails} 
+        itemName={itemName} 
+        itemPrice={price} />
       )}
     </div>
   );
