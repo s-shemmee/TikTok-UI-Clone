@@ -151,7 +151,7 @@ return (
             key={index} // Make sure to add a unique key prop when mapping over elements
             setShowItemDetails={setShowItemDetails}
             {...Image_details[index]}
-            storefront_images={[image]} // Create an array with a single image
+            storefront_images={image} // Create an array with a single image
           />
         ))}
 

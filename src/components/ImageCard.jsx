@@ -20,47 +20,41 @@ const ImageCard = (props) => {
 
 
   return (
-    <div className="image" style={{ maxHeight: '100%', overflow: 'scroll' }}>
-      {displaystorefront.length > 0 ? (
-        <div >
-          {displaystorefront.map((image, index) => (
-            <div key={index} style={{ display: 'inline-block' , maxHeight: '200%' }}>
-              {image.storefront_image_binary ? (
-                <>
-                  <img
-                    src={`data:image/png;base64,${image.storefront_image_binary}`}
-                    alt={image.name}
-                    style={{
-                      maxWidth: '100%',
-                      maxHeight: '200%',
-                      transform: 'scale(2)',
-                    }}
-                  />
-                  {console.log('image is ', image)} {/* Add this line to log the image */}
-                </>
-              ) : (
-                <p>No image available</p>
-              )}
-            </div>
-          ))}
-          {props.tags && props.tags.map((tag) => (
-            <ShoppingTag
-              key={tag.id}
-              id={tag.id}
-              text={tag.text}
-              x={tag.x}
-              y={tag.y}
-              onTagClick={handleTagClick}
-              isActive={activeTag === tag.id}
-              setShowItemDetails={setShowItemDetails}
-            />
-          ))}
-        </div>
-      ) : (
-        <p>No storefront images available</p>
-      )}
+    <div className="image" style={{ position: 'relative', height: '100%' }}>
+      {displaystorefront ? (
+        <img
+          src={`data:image/png;base64,${displaystorefront.storefront_image_binary}`}
+          alt={displaystorefront.name}
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%', // Adjust this to control the image height
+            transform: 'scale(2)',
+            position: 'absolute', // Position the image within the parent div
+            top: 30,
+            left: 0,
+          }}
+        />
+      ) : null}
   
-      <div className="bottom-controls" style={{ position: 'sticky', bottom: 0 }}>
+      {props.tags && props.tags.map((tag) => (
+        <ShoppingTag
+          key={tag.id}
+          id={tag.id}
+          text={tag.text}
+          x={tag.x}
+          y={tag.y}
+          onTagClick={handleTagClick}
+          isActive={activeTag === tag.id}
+          setShowItemDetails={setShowItemDetails}
+          style={{
+            position: 'absolute', // Position the shopping tag within the parent div
+            top: tag.y, // Adjust top and left to position the tag as needed
+            left: tag.x,
+          }}
+        />
+      ))}
+  
+      <div className="bottom-controls" style={{ position: 'relative', bottom: 150 }}>
         <div className="footer-left" style={{ marginRight: 'auto' }}>
           <FooterLeft username={username} description={description} song={song} />
         </div>
