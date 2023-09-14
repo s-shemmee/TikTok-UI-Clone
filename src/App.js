@@ -52,9 +52,22 @@ function App() {
   const [showItemDetails, setShowItemDetails] = useState(false);
   const itemDetailsRef = useRef(null);
   const [storefrontImages, setStorefrontImages] = useState([]);
+  function getRandomIndex() {
+    return Math.floor(Math.random() * 9) + 1;
+  }
+  
+  
   function get_storefront_images() {
     // An array of storefront IDs you want to fetch
-    const storefrontIds = [1, 2, 3];
+    // const storefrontIds = [1, 2, 3];
+    // Generate random indexes
+    const storefrontIds = [];
+    while (storefrontIds.length < 3) {
+      const randomIndex = getRandomIndex();
+      if (!storefrontIds.includes(randomIndex)) {
+        storefrontIds.push(randomIndex);
+      }
+    }
     
     // An array to store the promises for each request
     const requests = storefrontIds.map(storefrontId => {

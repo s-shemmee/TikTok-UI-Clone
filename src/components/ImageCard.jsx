@@ -24,7 +24,7 @@ const ImageCard = (props) => {
       {displaystorefront.length > 0 ? (
         <div >
           {displaystorefront.map((image, index) => (
-            <div key={index} style={{ display: 'inline-block' }}>
+            <div key={index} style={{ display: 'inline-block' , maxHeight: '100%' }}>
               {image.storefront_image_binary ? (
                 <>
                   <img
@@ -32,8 +32,8 @@ const ImageCard = (props) => {
                     alt={image.name}
                     style={{
                       maxWidth: '100%',
-                      maxHeight: '200%',
-                      transform: 'scale(1.5)',
+                      maxHeight: '300%',
+                      transform: 'scale(1)',
                     }}
                   />
                   {console.log('image is ', image)} {/* Add this line to log the image */}
@@ -64,9 +64,9 @@ const ImageCard = (props) => {
         <div className="footer-left" style={{ marginRight: 'auto' }}>
           <FooterLeft username={username} description={description} song={song} />
         </div>
-        {/* <div className="footer-right" style={{ marginRight: 'auto' }}>
+        <div className="footer-right" style={{ marginRight: 'auto' }}>
           <FooterRight likes={likes} shares={shares} comments={comments} saves={saves} profilePic={profilePic} />
-        </div> */}
+        </div>
       </div>
     </div>
   );
