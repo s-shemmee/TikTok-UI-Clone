@@ -40,7 +40,7 @@ const ImageCard = (props) => {
         <ShoppingTag
           key={tag.id}
           id={tag.id}
-          text={tag.text}
+          itemName={tag.text}
           x={tag.x}
           y={tag.y}
           onTagClick={handleTagClick}
