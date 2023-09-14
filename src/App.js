@@ -8,10 +8,10 @@ import ProfileImagePage from './components/ProfileImagePage/ProfileImagePage';
 import ItemDetails from './components/ItemDetails/src/components/ItemDetails/ItemDetails.jsx';
 import axios from 'axios';
 import ImageWithPopup from './components/achievementicon';
-
+import ImageCard from'./components/ImageCard';
 
 // This array holds information about different videos
-const videoUrls = [
+const Image_details = [
   {
     url: require('./videos/video1.mp4'),
     profilePic: 'https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/41565/square_thumb%402x.jpg',
@@ -52,17 +52,33 @@ function App() {
   const [showItemDetails, setShowItemDetails] = useState(false);
   const itemDetailsRef = useRef(null);
   const [storefrontImages, setStorefrontImages] = useState([]);
-  function get_storefront_images () {
-    axios.get('http://localhost:5000/get-user-storefront-images?user_id=1')
-      .then(function (response) {
-        // Access the storefront images from the response
-        const images = response.data.storefront_images;
-        setStorefrontImages(images);
-      })
-      .catch(function (error) {
-        console.error('Error:', error);
+  function get_storefront_images() {
+    // An array of storefront IDs you want to fetch
+    const storefrontIds = [1, 2, 3];
+    
+    // An array to store the promises for each request
+    const requests = storefrontIds.map(storefrontId => {
+      return axios.get(`https://backend-tik-fejzxr14d-trollorder.vercel.app/get-user-storefront-image?user_id=1&storefront_id=${storefrontId}`)
+        .then(function (response) {
+          // Access the storefront image from the response
+          return response.data.storefront_image;
+        })
+        .catch(function (error) {
+          console.error('Error:', error);
+          return null;
+        });
+    });
+  
+    Promise.all(requests)
+      .then(images => {
+        const validImages = images.filter(image => image !== null);
+  
+        if (validImages.length === storefrontIds.length) {
+          setStorefrontImages(validImages);
+        }
       });
   }
+  
 
   useEffect(() => {
     get_storefront_images()
@@ -117,27 +133,21 @@ function App() {
     };
 }, [showItemDetails]);
 
-  return (
+return (
     <div className="app">
       <div className="container">
-      {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
+        {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
         {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
-        <div style={{ overflowX: 'scroll', whiteSpace: 'nowrap' }}>
-            {storefrontImages.length > 0 ? (
-              <div>
-                {storefrontImages.map((image, index) => (
-                  <div key={index} style={{ display: 'inline-block'}}>
-                    <h2>{image.name}</h2>
-                    <p>{image.description}</p>
-                    <p>{image.style}</p>
-                    <img src={`data:image/png;base64,${image.storefront_image_binary}`} alt={image.name} />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p>No storefront images found.</p>
-            )}
-          </div>
+
+        {storefrontImages.length > 0 && ( 
+          <ImageCard
+            setShowItemDetails={setShowItemDetails}
+            {...Image_details[0]}
+            storefront_images={storefrontImages}
+
+          />
+        )}
+
         <BottomNavbar className="bottom-navbar" />
         {/* <ImageWithPopup imagePath={"public\TikTok User 2.png"} achievement_id={14}></ImageWithPopup> */}
       </div>
