@@ -25,7 +25,6 @@ const Image_details = [
     tags: [
       { id: 'product1', text: 'Product 1', x: 110, y: 340 },
       { id: 'product2', text: 'Product 2', x: 220, y: 330 },
-      // ... more tags
     ]
   },
   {
@@ -59,15 +58,15 @@ function App() {
   
   function get_storefront_images() {
     // An array of storefront IDs you want to fetch
-    // const storefrontIds = [1, 2, 3];
+    const storefrontIds = [1,2,3,4,5,6,7,8,9];
     // Generate random indexes
-    const storefrontIds = [];
-    while (storefrontIds.length < 5) {
-      const randomIndex = getRandomIndex();
-      if (!storefrontIds.includes(randomIndex)) {
-        storefrontIds.push(randomIndex);
-      }
-    }
+    // const storefrontIds = [];
+    // while (storefrontIds.length < 5) {
+    //   const randomIndex = getRandomIndex();
+    //   if (!storefrontIds.includes(randomIndex)) {
+    //     storefrontIds.push(randomIndex);
+    //   }
+    // }
     
     // An array to store the promises for each request
     const requests = storefrontIds.map(storefrontId => {
@@ -153,6 +152,7 @@ return (
         {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
 
         {storefrontImages.length > 0 && ( 
+          {storefrontImages.map((image, index) => (
           <ImageCard
             setShowItemDetails={setShowItemDetails}
             {...Image_details[0]}
