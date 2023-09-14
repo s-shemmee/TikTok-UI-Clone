@@ -32,7 +32,97 @@ This repository contains the backend services for the "TikTok: Future x Past" pr
    ```
 
 ## 🌐 API Endpoints
-(Expand upon the API routes as needed.)
+
+### /gen-new-storefront-images
+- **Method**: POST
+- **Parameters**: 
+  - user_id (Query Parameter)
+  - shop_theme (Query Parameter)
+- **Expected Data Format**: JSON
+
+### /get-user-storefront-images
+- **Method**: GET
+- **Parameters**: 
+  - user_id (Query Parameter)
+- **Expected Data Format**: JSON
+
+### /download-user-storefront-image
+- **Method**: GET
+- **Parameters**: 
+  - user_id (Query Parameter)
+  - storefront_id (Query Parameter)
+- **Expected Data Format**: Binary image (PNG)
+
+### /get-all-user-storefront-image
+- **Method**: GET
+- **Parameters**: 
+  - user_id (Query Parameter)
+- **Expected Data Format**: JSON
+
+### /delete-all-storefronts
+- **Method**: DELETE
+- **Parameters**: None
+- **Expected Data Format**: JSON
+
+### /gen-achievement-image
+- **Method**: POST
+- **Parameters**: 
+  - date (Query Parameter)
+  - product (Query Parameter)
+- **Expected Data Format**: JSON
+
+### /add-achievement
+- **Method**: POST
+- **Parameters**: 
+  - user_id (Query Parameter)
+  - achievement_id (Query Parameter)
+- **Expected Data Format**: JSON
+
+### /view-all-achievement
+- **Method**: GET
+- **Parameters**: None
+- **Expected Data Format**: JSON
+
+### /view-achievement-image
+- **Method**: GET
+- **Parameters**: 
+  - achievement_id (Query Parameter)
+- **Expected Data Format**: JSON
+
+### /get-achievement-image
+- **Method**: GET
+- **Parameters**: 
+  - achievement_id (Query Parameter)
+- **Expected Data Format**: Binary image (PNG)
+
+### /view-all-achievement-user
+- **Method**: GET
+- **Parameters**: 
+  - user_id (Query Parameter)
+- **Expected Data Format**: JSON
+
+### /assign-achievements-to-user
+- **Method**: POST
+- **Parameters**: 
+  - user_id (Query Parameter)
+  - achievement_list (Query Parameter as JSON)
+- **Expected Data Format**: JSON
+
+### /get-recommendations
+- **Method**: GET
+- **Parameters**: 
+  - user_id (Query Parameter)
+- **Expected Data Format**: JSON
+
+### /seed-specific
+- **Method**: POST
+- **Parameters**: None
+- **Expected Data Format**: JSON
+
+### /seedrandom
+- **Method**: POST
+- **Parameters**: JSON payload with parameters users, achievements, and storefronts
+- **Expected Data Format**: JSON
 
 ## 🔄 External Integrations
 
