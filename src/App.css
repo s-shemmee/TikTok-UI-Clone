@@ -19,6 +19,7 @@ html {
   height: 667px;
   width: 375px;
   border-radius: 25px;
+  overflow-x: hidden;
   overflow: scroll;
   scroll-snap-type: y mandatory;
 }
