@@ -24,7 +24,7 @@ const ImageCard = (props) => {
       {displaystorefront.length > 0 ? (
         <div >
           {displaystorefront.map((image, index) => (
-            <div key={index} style={{ display: 'inline-block' , maxHeight: '100%' }}>
+            <div key={index} style={{ display: 'inline-block' , maxHeight: '200%' }}>
               {image.storefront_image_binary ? (
                 <>
                   <img
@@ -32,7 +32,7 @@ const ImageCard = (props) => {
                     alt={image.name}
                     style={{
                       maxWidth: '100%',
-                      maxHeight: '300%',
+                      maxHeight: '200%',
                       transform: 'scale(1)',
                     }}
                   />
