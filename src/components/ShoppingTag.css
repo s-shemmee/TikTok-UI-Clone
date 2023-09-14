@@ -42,7 +42,7 @@
 
 .tag-button.onClick {
     transform: scale(1.2); /* Increase size when clicked */
-    border: 2px solid lightblue; /* Add a light blue border when clicked */
+    border: 3px solid rgb(133, 204, 227); /* Add a light blue border when clicked */
   }
 
 .tag-popup {
