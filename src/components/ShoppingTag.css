@@ -8,7 +8,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.4);
     }
     100% {
         transform: scale(1);
@@ -25,8 +25,8 @@
 }
 
 .tag-button {
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: white;
     border: none;
@@ -37,11 +37,9 @@
 
 .tag-button:hover {
     animation: pulse 1.5s infinite, colorPulse 1.5s infinite;
-
 }
 
 .tag-button.onClick {
-    transform: scale(1.2); /* Increase size when clicked */
     border: 3px solid rgb(133, 204, 227); /* Add a light blue border when clicked */
   }
 
