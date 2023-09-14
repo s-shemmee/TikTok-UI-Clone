@@ -6,6 +6,7 @@ import TopNavbar from './components/TopNavbar';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import ProfileImagePage from './components/ProfileImagePage/ProfileImagePage';
 import ItemDetails from './components/ItemDetails/src/components/ItemDetails/ItemDetails.jsx';
+import ProfileImagePage2 from './components/ProfileImagePage/ProfileImagePage2';
 
 
 
@@ -110,7 +111,7 @@ function App() {
     <div className="app">
       <div className="container">
       {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
-        {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
+      {(location.pathname !== "/profile-image" && location.pathname !== "/profile-image/2") && <TopNavbar className="top-navbar" />}
         <Routes>
           <Route path="/" element={
             <>
@@ -126,6 +127,7 @@ function App() {
             </>
           } />
           <Route path="/profile-image" element={<ProfileImagePage />} />
+          <Route path="/profile-image/2" element={<ProfileImagePage2 />} />
         </Routes>
         <BottomNavbar className="bottom-navbar" />
       </div>

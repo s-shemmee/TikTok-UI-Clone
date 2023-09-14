@@ -10,30 +10,31 @@ function ProfileImagePage() {
   const images = [
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=9",
-      captions: ["Holiday Spirit", "Achieved!"]
+      captions: ["Oktoberfest", "Achieved!"]
     },
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=10",
-      captions: ["Cosmic Lover", "Achieved!"]
+      captions: ["Teachers’ Day Sale", "Achieved!"]
     },
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=11",
-      captions: ["Candle Fanatic", "Achieved!"]
+      captions: ["Teachers’ Day Sale", "Achieved!"]
     },
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=12",
-      captions: ["Scents & Wines", "Achieved!"]
+      captions: ["Teachers’ Day Sale", "Achieved!"]
     },
     {
       url: "https://backend-tik-fcdzdwm1n-trollorder.vercel.app/get-achievement-image?achievement_id=13",
-      captions: ["Art Lover", "Achieved!"]
+      captions: ["Teachers’ Day Sale", "Achieved!"]
     },
+    // ... add more images with captions
   ];
 
 
   return (
     <div className="profile-image-page">
-      <img src="/TikTok User.png" alt="Profile" className="full-profile-image" />
+      <img src="/TikTok User 2.png" alt="Profile" className="full-profile-image" />
       <div className="red-box">
         <Swiper
           className="swiper-container-style"

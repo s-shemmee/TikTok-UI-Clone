@@ -1,0 +1,77 @@
+.profile-image-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 375px;
+    /* overflow: hidden;  */
+    z-index: 1000;
+}
+
+.full-profile-image {
+    width: 100%; 
+    display: block;
+    object-fit: cover;
+    margin-bottom: -77px;
+}
+
+.swiper {
+    z-index: 1000 !important;
+}
+
+
+.swiper-container-style {
+    position: absolute;
+    width: 100%; 
+    top: 0% !important;
+    left: 50%;          
+    transform: translateX(-50%); 
+    z-index: 1000 !important;
+    height: 100%;  /* Adjust as needed */
+}
+.red-box {
+    position: absolute;
+    width: 100%; 
+    height: 27%; 
+    top: 63%;  /* Adjusted top position to overlap with Swiper */
+    left: 50%;          
+    transform: translateX(-50%); 
+    background-color: rgb(255, 255, 255);  /* Red color for visualization */
+    z-index: 1; 
+}
+.swiper-wrapper {
+    z-index: 1000 !important;
+}
+
+.clickable-box {
+    position: absolute;
+    width: 29.59%; 
+    height: 2.34%; 
+    top: 94.83%;        
+    left: 50%;          
+    transform: translateX(-50%); 
+    cursor: pointer;    
+    background-color: rgba(255, 255, 255, 0.3);  /* For visualization. You can remove this or set opacity to 0 once you have verified its position. */
+}
+/* Apply Montserrat to the entire page or specific elements */
+.profile-image-page {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+/* Style the caption */
+.image-caption {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    margin-top: 8px;
+}
+.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    left: var(--swiper-scrollbar-sides-offset, 1%)!important;
+    bottom: var(--swiper-scrollbar-bottom, 0px)!important;
+    top: var(--swiper-scrollbar-top, auto);
+    z-index: 50;
+    height: var(--swiper-scrollbar-size, 4.8px)!important;
+    width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+}
