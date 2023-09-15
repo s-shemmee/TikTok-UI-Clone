@@ -15,7 +15,7 @@ import ImageCard from './components/ImageCard';
 const Image_details = [
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    profilePic: 'https://marketplace.canva.com/EAFXS8-cvyQ/1/0/1600w/canva-brown-and-light-brown%2C-circle-framed-instagram-profile-picture-2PE9qJLmPac.jpg',
     username: 'Office Essentials Emporium',
     description: 'Boost your productivity with top-notch office products and essentials, curated just for you. Swipe up for a more efficient workspace.',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
@@ -30,7 +30,7 @@ const Image_details = [
   },
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    profilePic: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
     username: 'Sip & Savor Whiskey Lounge',
     description: 'Indulge in the world of spirits and fine whiskey at our lounge. Discover rare and exquisite flavors. Swipe up to elevate your palate.',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
@@ -45,7 +45,7 @@ const Image_details = [
   },
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    profilePic: 'https://images.saymedia-content.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTk4MDQzMTI5NzY3NTM1ODA2/short-captions-for-profile-pictures.png',
     username: 'Fashionista Chic',
     description: 'Elevate your style with these trendy fashion products, carefully curated just for you. Swipe up for more.',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
@@ -60,7 +60,7 @@ const Image_details = [
   } ,
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    profilePic: 'https://media.istockphoto.com/id/1154642632/photo/close-up-portrait-of-brunette-woman.jpg?b=1&s=612x612&w=0&k=20&c=7hgSq1L2mpIbpuuw00KELApMpmZfBkZ-RBxn3Qps5zQ=',
     username: 'TechGeek Hub',
     description: 'Stay ahead in the tech game with these cutting-edge tech products, handpicked just for you. Swipe up for more.',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
@@ -75,7 +75,7 @@ const Image_details = [
   } ,
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    profilePic: 'https://newprofilepic.photo-cdn.net//assets/images/article/profile.jpg?5315ffb',
     username: 'Sushi Delight',
     description: 'Experience the authentic flavors of Japan at Sushi Delight. Explore our mouthwatering sushi and more. Swipe up for a taste of Japan!',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
@@ -90,7 +90,7 @@ const Image_details = [
   },
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    profilePic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL043GvIn5-GPyjRDKuihpqAfQBaNXkuUQ6w&usqp=CAU',
     username: 'Sneaker & Jacket Haven',
     description: 'Step up your style game with the latest sneakers and jackets, handpicked just for you. Swipe up for more.',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
@@ -105,7 +105,7 @@ const Image_details = [
   } ,
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    profilePic: 'https://shotkit.com/wp-content/uploads/2021/06/cool-profile-pic-matheus-ferrero.jpeg',
     username: 'WorkTech Essentials',
     description: 'Enhance your productivity with the latest personal tech products for work. Stay connected and efficient. Swipe up for the future of work.',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
@@ -135,7 +135,7 @@ const Image_details = [
   },
   {
     url: require('./videos/video2.mp4'),
-    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    profilePic: 'https://www.nigeriagalleria.com/blog/wp-content/uploads/2023/03/Why-do-Anime-Characters-Make-Perfect-Profile-Pictures.png',
     username: 'Denim Dreamland',
     description: 'Dive into the world of denim fashion. Explore the latest trends in jeans, jackets, and more. Swipe up to upgrade your denim game!',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
