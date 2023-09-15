@@ -47,8 +47,9 @@ const ImageCard = (props) => {
             maxHeight: '100%', // Adjust this to control the image height
             transform: 'scale(2)',
             position: 'absolute', // Position the image within the parent div
-            top: 30,
+            top: 100,
             left: 0,
+            scrollSnapAlign : 'start',
           }}
         />
       ) : null}
@@ -72,11 +73,11 @@ const ImageCard = (props) => {
       ))}
       {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
 
-      <div className="bottom-controls" style={{ position: 'relative', bottom: 150 }}>
+      <div className="bottom-controls" style={{ position: 'absolute', bottom: 100 }}>
         <div className="footer-left" style={{ marginRight: 'auto' }}>
           <FooterLeft username={username} description={description} song={song} />
         </div>
-        <div className="footer-right" style={{ marginRight: 'auto' }}>
+        <div className="footer-right" style={{ marginRight: 'auto' , position:'sticky'}}>
           <FooterRight likes={likes} shares={shares} comments={comments} saves={saves} profilePic={profilePic} />
         </div>
       </div>
