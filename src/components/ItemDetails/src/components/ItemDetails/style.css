@@ -3,7 +3,7 @@
   overflow: hidden;
   width: 414px;  
   position: relative; /* Change from fixed to absolute */
-  bottom: 100px; /* Adjust this to be 0 so it's aligned to the bottom of its container */
+  bottom: 10%; /* Adjust this to be 0 so it's aligned to the bottom of its container */
   left: 50%;
   transform: translateX(-50%) scale(0.9058);
   z-index: 1000000000;  
