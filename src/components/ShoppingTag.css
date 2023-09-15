@@ -43,7 +43,7 @@
 .tag-button.onClick {
     border: 4px solid rgb(132, 231, 244); /* Add a light blue border when clicked */
     animation: none;
-}
+    }
 
 .tag-popup {
     position: absolute; /* Change from relative to absolute */

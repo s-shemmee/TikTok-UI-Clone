@@ -3,12 +3,16 @@ import FooterLeft from './FooterLeft';
 import FooterRight from './FooterRight';
 import './ImageCard.css';
 import ShoppingTag from './ShoppingTag';
+import ItemDetails from './ItemDetails/src/components/ItemDetails/ItemDetails.jsx';
+
 
 const ImageCard = (props) => {
-  const { setShowItemDetails,username, description, song, likes, shares, comments, saves, profilePic,storefront_images} = props;
+  const { username, description, song, likes, shares, comments, saves, profilePic,storefront_images} = props;
   const videoRef = useRef(null);
   const [displaystorefront , setDisplaystorefront]= useState([])
   const [activeTag, setActiveTag] = useState(null);
+  const [showItemDetails, setShowItemDetails] = useState(false);
+  const itemDetailsRef = useRef(null);
   const handleTagClick = (tagId) => {
     setActiveTag((prevTag) => (prevTag === tagId ? null : tagId));
   };  
@@ -16,6 +20,19 @@ const ImageCard = (props) => {
     // Just set storefront_images as the new state value
     setDisplaystorefront(storefront_images);
   }, [storefront_images]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+        if (showItemDetails && itemDetailsRef.current && !itemDetailsRef.current.contains(event.target)) {
+            setShowItemDetails(false);
+        }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+        document.removeEventListener('click', handleClickOutside);
+    };
+}, [showItemDetails]);
+
 
 
 
@@ -53,7 +70,8 @@ const ImageCard = (props) => {
           }}
         />
       ))}
-  
+      {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
+
       <div className="bottom-controls" style={{ position: 'relative', bottom: 150 }}>
         <div className="footer-left" style={{ marginRight: 'auto' }}>
           <FooterLeft username={username} description={description} song={song} />

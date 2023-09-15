@@ -5,7 +5,6 @@ import BottomNavbar from './components/BottomNavbar';
 import TopNavbar from './components/TopNavbar';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import ProfileImagePage from './components/ProfileImagePage/ProfileImagePage';
-import ItemDetails from './components/ItemDetails/src/components/ItemDetails/ItemDetails.jsx';
 import axios from 'axios';
 import ImageWithPopup from './components/achievementicon';
 import ImageCard from'./components/ImageCard';
@@ -49,8 +48,6 @@ const Image_details = [
 function App() {
   const [videos, setVideos] = useState([]);
   const videoRefs = useRef([]);
-  const [showItemDetails, setShowItemDetails] = useState(false);
-  const itemDetailsRef = useRef(null);
   const [storefrontImages, setStorefrontImages] = useState([]);
   function getRandomIndex() {
     return Math.floor(Math.random() * 9) + 1;
@@ -128,28 +125,16 @@ function App() {
     };
   }, [videos]);
   const location = useLocation();
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-        if (showItemDetails && itemDetailsRef.current && !itemDetailsRef.current.contains(event.target)) {
-            setShowItemDetails(false);
-        }
-    };
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-        document.removeEventListener('click', handleClickOutside);
-    };
-}, [showItemDetails]);
+  
 
 return (
     <div className="app">
       <div className="container">
-        {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
         {location.pathname !== "/profile-image" && <TopNavbar className="top-navbar" />}
 
         {storefrontImages.length > 0 && storefrontImages.map((image, index) => (
           <ImageCard
             key={index} // Make sure to add a unique key prop when mapping over elements
-            setShowItemDetails={setShowItemDetails}
             {...Image_details[index]}
             storefront_images={image} // Create an array with a single image
           />
