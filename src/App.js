@@ -12,37 +12,142 @@ import ImageCard from'./components/ImageCard';
 // This array holds information about different videos
 const Image_details = [
   {
-    url: require('./videos/video1.mp4'),
-    profilePic: 'https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/41565/square_thumb%402x.jpg',
-    username: 'Office Wear For You',
-    description: 'All the best office apparel, just for you to peruse. Swipe up for more.',
-    song: 'Original sound - Famed Flames',
-    likes: 430,
-    comments: 13,
-    saves: 23,
-    shares: 1,
-    tags: [
-      { id: 'product1', text: 'Product 1', x: 110, y: 340 },
-      { id: 'product2', text: 'Product 2', x: 220, y: 330 },
-      // ... more tags
-    ]
-  },
-  {
     url: require('./videos/video2.mp4'),
     profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
-    username: 'Women’s Accessories For You',
-    description: 'Slay your way with these women accessories, handpicked just for you. Swipe up for more.',
+    username: 'Office Essentials Emporium',
+    description: 'Boost your productivity with top-notch office products and essentials, curated just for you. Swipe up for a more efficient workspace.',
     song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
     likes: '13.4K',
     comments: 3121,
     saves: 254,
     shares: 420,
     tags: [
-      { id: 'product1', text: 'Product 1', x: 300, y: 100 },
-      { id: 'product2', text: 'Product 2', x: 100, y: 200 },
-      // ... more tags
+      { id: 'product1', text: 'Desk Organizer', x: 300, y: 100 },
+      { id: 'product2', text: 'Ergonomic Chair', x: 100, y: 200 },
     ]
   },
+  {
+    url: require('./videos/video2.mp4'),
+    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    username: 'Sip & Savor Whiskey Lounge',
+    description: 'Indulge in the world of spirits and fine whiskey at our lounge. Discover rare and exquisite flavors. Swipe up to elevate your palate.',
+    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    likes: '13.4K',
+    comments: 3121,
+    saves: 254,
+    shares: 420,
+    tags: [
+    { id: 'spirit1', text: 'Single Malt Scotch', x: 300, y: 100 },
+    { id: 'spirit2', text: 'Bourbon Whiskey', x: 100, y: 200 },
+    ]
+  },
+  {
+    url: require('./videos/video2.mp4'),
+    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    username: 'Fashionista Chic',
+    description: 'Elevate your style with these trendy fashion products, carefully curated just for you. Swipe up for more.',
+    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    likes: '13.4K',
+    comments: 3121,
+    saves: 254,
+    shares: 420,
+    tags: [
+      { id: 'product1', text: 'Stylish Dress', x: 300, y: 100 },
+      { id: 'product2', text: 'Designer Handbag', x: 100, y: 200 },
+    ]
+  } ,
+  {
+    url: require('./videos/video2.mp4'),
+    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    username: 'TechGeek Hub',
+    description: 'Stay ahead in the tech game with these cutting-edge tech products, handpicked just for you. Swipe up for more.',
+    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    likes: '13.4K',
+    comments: 3121,
+    saves: 254,
+    shares: 420,
+    tags: [
+      { id: 'product1', text: 'Smartphone', x: 300, y: 100 },
+      { id: 'product2', text: 'Laptop', x: 100, y: 200 },
+    ]
+  } ,
+  {
+    url: require('./videos/video2.mp4'),
+    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    username: 'Sushi Delight',
+    description: 'Experience the authentic flavors of Japan at Sushi Delight. Explore our mouthwatering sushi and more. Swipe up for a taste of Japan!',
+    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    likes: '13.4K',
+    comments: 3121,
+    saves: 254,
+    shares: 420,
+    tags: [
+      { id: 'dish1', text: 'Sashimi Platter', x: 300, y: 100 },
+      { id: 'dish2', text: 'Tempura Udon', x: 100, y: 200 },
+    ]
+  },
+  {
+    url: require('./videos/video2.mp4'),
+    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    username: 'Sneaker & Jacket Haven',
+    description: 'Step up your style game with the latest sneakers and jackets, handpicked just for you. Swipe up for more.',
+    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    likes: '13.4K',
+    comments: 3121,
+    saves: 254,
+    shares: 420,
+    tags: [
+      { id: 'product1', text: 'High-Top Sneakers', x: 300, y: 100 },
+      { id: 'product2', text: 'Leather Jacket', x: 100, y: 200 },
+    ]
+  } ,
+  {
+    url: require('./videos/video2.mp4'),
+    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    username: 'WorkTech Essentials',
+    description: 'Enhance your productivity with the latest personal tech products for work. Stay connected and efficient. Swipe up for the future of work.',
+    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    likes: '13.4K',
+    comments: 3121,
+    saves: 254,
+    shares: 420,
+    tags: [
+      { id: 'product1', text: 'Wireless Earbuds', x: 300, y: 100 },
+      { id: 'product2', text: 'Portable Monitor', x: 100, y: 200 },
+    ]
+  },
+  {
+    url: require('./videos/video2.mp4'),
+    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    username: 'Chill & Grill Supermarket',
+    description: 'Discover a world of delicious cold supermarket food. From refreshing salads to gourmet sandwiches. Swipe up to chill and satisfy your taste buds.',
+    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    likes: '13.4K',
+    comments: 3121,
+    saves: 254,
+    shares: 420,
+    tags: [
+      { id: 'food1', text: 'Mediterranean Salad', x: 300, y: 100 },
+      { id: 'food2', text: 'Gourmet Sandwich', x: 100, y: 200 },
+    ]
+  },
+  {
+    url: require('./videos/video2.mp4'),
+    profilePic: 'https://images.meesho.com/images/products/164261522/yhfct_256.webp',
+    username: 'Denim Dreamland',
+    description: 'Dive into the world of denim fashion. Explore the latest trends in jeans, jackets, and more. Swipe up to upgrade your denim game!',
+    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    likes: '13.4K',
+    comments: 3121,
+    saves: 254,
+    shares: 420,
+    tags: [
+      { id: 'product1', text: 'Slim Fit Jeans', x: 300, y: 100 },
+      { id: 'product2', text: 'Denim Jacket', x: 100, y: 200 },
+    ]
+  }
+
+
 ];
 
 function App() {

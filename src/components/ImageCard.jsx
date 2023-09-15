@@ -73,7 +73,7 @@ const ImageCard = (props) => {
       ))}
       {showItemDetails && <ItemDetails ref={itemDetailsRef} />}
 
-      <div className="bottom-controls" style={{ position: 'absolute', bottom: 50 }}>
+      <div className="bottom-controls" style={{ position: 'absolute', bottom: 100 }}>
         <div className="footer-left" style={{ marginRight: 'auto' }}>
           <FooterLeft username={username} description={description} song={song} />
         </div>
