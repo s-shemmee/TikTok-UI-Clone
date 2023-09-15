@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 375px;
-    /* overflow: hidden;  */
+    overflow: hidden;
     z-index: 1000;
 }
 
