@@ -1,5 +1,5 @@
 .tag-container {
-    position: absolute;
+    position: relative;
     z-index: 1;
 }
 
@@ -8,7 +8,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.4);
     }
     100% {
         transform: scale(1);
@@ -25,11 +25,12 @@
 }
 
 .tag-button {
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: white;
-    border: none;
+    opacity: 75%;
+    background-color: rgb(170, 174, 175);
+    border: 4px solid rgb(10, 10, 10); /* Add a light blue border when clicked */
     cursor: pointer;
     position: relative; /* Add this to ensure the popup is positioned relative to this button */
     animation: pulse 1.5s infinite; /* This will apply the pulse animation */
@@ -38,6 +39,11 @@
 .tag-button:hover {
     animation: pulse 1.5s infinite, colorPulse 1.5s infinite;
 }
+
+.tag-button.onClick {
+    border: 4px solid rgb(132, 231, 244); /* Add a light blue border when clicked */
+    animation: none;
+    }
 
 .tag-popup {
     position: absolute; /* Change from relative to absolute */

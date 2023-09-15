@@ -19,6 +19,7 @@ html {
   height: 667px;
   width: 375px;
   border-radius: 25px;
+  overflow-x: hidden;
   overflow: scroll;
   scroll-snap-type: y mandatory;
 }
@@ -78,7 +79,7 @@ html {
 .bottom-navbar {
   position: sticky;
   background-color: #161616;
-  bottom: 0;
+  bottom: -1;
   width: 100%;
   height: 45px;
   display: flex;
