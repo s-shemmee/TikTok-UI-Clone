@@ -1,6 +1,8 @@
 # TikTok UI Clone
 The TikTok UI Clone is a web application developed to replicate the user interface of the TikTok app. It is built using React.js, CSS, and JSX, and allows users to browse and view TikTok-style videos in a familiar and interactive interface.
 
+![Opera Snapshot_2024-02-08_205956_tik-tok-ui-clone-shemmee vercel app](https://github.com/s-shemmee/TikTok-UI-Clone/assets/56132945/353e9840-edc3-40fa-9e36-ec66b113738e)
+
 # Features
 - Browse and view TikTok-style videos.
 - Smooth and responsive video playback.
